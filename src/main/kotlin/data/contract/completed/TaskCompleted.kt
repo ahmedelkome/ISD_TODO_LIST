@@ -1,4 +1,4 @@
-package contract.completed
+package data.contract.completed
 
 import model.Task
 

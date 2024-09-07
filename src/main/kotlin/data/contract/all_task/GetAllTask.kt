@@ -1,4 +1,4 @@
-package contract.all_task
+package data.contract.all_task
 
 import model.Task
 
