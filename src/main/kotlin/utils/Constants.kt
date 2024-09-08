@@ -23,5 +23,9 @@ object Constants {
     const val INVALID_ID = "Invalid ID"
     const val TASKS_SAVED_EXITING = "Tasks saved. Exiting..."
     const val INVALID_OPTION = "Invalid option, please try again."
-    const val TASKS_LOADED_FROM_FILE= "Tasks loaded from file:"
+    const val TASKS_LOADED_FROM_FILE = "Tasks loaded from file:"
+    const val INVALID_DESCRIPTION = "Invalid description."
+    const val CHOOSE_REMOVAL_METHOD = "Choose removal Way: "
+    const val REMOVE_BY_ID = "1 - Remove by ID"
+    const val REMOVE_BY_DESCRIPTION = "2 - Remove by Description"
 }
