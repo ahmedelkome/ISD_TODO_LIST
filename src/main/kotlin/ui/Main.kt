@@ -39,6 +39,7 @@ fun main() {
         println(Constants.EXIT)
 
         when (readLine()) {
+
             "1" -> {
                 print(Constants.ENTER_TASK_DESCRIPTION)
                 val description = readLine() ?: ""
@@ -46,12 +47,30 @@ fun main() {
             }
 
             "2" -> {
-                print(Constants.ENTER_TASK_ID)
-                val id = readLine()?.toIntOrNull()
-                if (id != null) {
-                    removeTask.removeTask(id = id, tasks = tasks)
-                } else {
-                    println(Constants.INVALID_ID)
+                println(Constants.CHOOSE_REMOVAL_METHOD)
+                println(Constants.REMOVE_BY_ID)
+                println(Constants.REMOVE_BY_DESCRIPTION)
+                when (readLine()) {
+                    "1" -> {
+                        print(Constants.ENTER_TASK_ID)
+                        val id = readLine()?.toIntOrNull()
+
+                        if (id != null) {
+                            removeTask.removeTask(id = id, tasks = tasks)
+                        } else {
+                            println(Constants.INVALID_ID)
+                        }
+                    }
+
+                    "2" -> {
+                        println(Constants.PLEASE_ENTER_DESCRIPTION)
+                        val description: String = readLine() ?: ""
+                        if (description.isNullOrEmpty()) {
+                            println(Constants.INVALID_DESCRIPTION)
+                        } else {
+                            removeTask.removeTaskByDescription(description = description, tasks = tasks)
+                        }
+                    }
                 }
             }
 
